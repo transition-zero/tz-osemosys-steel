@@ -1,0 +1,5 @@
+#Model nameplate
+id: steel_tz_osemosys
+long_name: "TZ OSeMOSYS Model for the Japan Steel Sector"
+description: >
+  Optimise the pathways of steelmaking till 2060 to meet Japan's decarbonisation goals based on least costs and climate constraints. 

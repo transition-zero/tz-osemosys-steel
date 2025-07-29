@@ -1,0 +1,669 @@
+technologies:
+################################################PRODUCTION TECHNOLOGIES####################################################
+  - id: BFBOF
+    long_name: Blast Furnace-Basic Oxygen Furnace
+    opex_fixed: 113 #$/t-steel https://iea.blob.core.windows.net/assets/eb0c8ec1-3665-4959-97d0-187ceca189a8/Iron_and_Steel_Technology_Roadmap.pdf 68 BFBOF + 5% of 40 = 2 to sinter plant
+    capex: 316 #$/t-steel
+    availability_factor: 0.85
+    operating_life: 20 #yrs = the final year before relining, can avg last 100 years
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+      2029: 0
+      2030: 0
+    residual_capacity: #in tonnes
+      2022: 76829556
+      2023: 74362848
+      2024: 73690905
+      2025: 73690905
+      2026: 69631905
+      2027: 69631905
+      2028: 69631905
+      2029: 69631905
+      2030: 69631905
+      2031: 58571905
+      2032: 58571905
+      2033: 58571905
+      2034: 58571905
+      2035: 58571905
+      2036: 58571905
+      2037: 54710905
+      2038: 54710905
+      2039: 54710905
+      2040: 54710905
+      2041: 54710905
+      2042: 54710905
+      2043: 54710905
+      2044: 54710905
+      2045: 54710905
+      2046: 54710905
+      2047: 54710905
+      2048: 54710905
+      2049: 54710905
+      2050: 54710905
+      2051: 54710905
+      2052: 54710905
+      2053: 54710905
+      2054: 54710905
+      2055: 54710905
+      2056: 54710905
+      2057: 54710905
+      2058: 54710905
+      2059: 54710905
+      2060: 54710905
+
+    operating_modes:
+      - id: BFBOF_MODE1 
+        long_name: Coke + PCI
+        description: default steelmaking route in BFBOF
+        input_activity_ratio:
+          COKE: 14.283 #GJ/t-steel
+          IRON_ORE: 1.4 #t/t-steel
+          SCRAP: 0.137 #t/t-steel
+          NAT_GAS: 0.0 #GJ/t-steel 
+          ELEC: 0.204 #MWh/t-steel
+          LIME: 0.023 #t/t-steel
+          THERMALCOAL: 0.0 #GJ/tonne
+          PCI: 4.749 #t/t-steel
+        output_activity_ratio:
+          # PRIMARY_STEEL: 1.0 #t-steel
+          PRIMARY_STEEL:
+            2022: 1
+            2023: 1
+            2024: 1
+            2025: 1
+            2026: 1
+            2027: 1
+            2028: 1
+            2029: 1
+            2030: 1
+            2031: 1
+            2032: 1
+            2033: 1
+            2034: 1
+            2035: 0
+            2036: 0
+            2037: 0
+            2038: 0
+            2039: 0
+            2040: 0
+            2041: 0
+            2042: 0
+            2043: 0
+            2044: 0
+            2045: 0
+            2046: 0
+            2047: 0
+            2048: 0
+            2049: 0
+            2050: 0
+            2051: 0
+            2052: 0
+            2053: 0
+            2054: 0
+            2055: 0
+            2056: 0
+            2057: 0
+            2058: 0
+            2059: 0
+            2060: 0
+
+      - id: BFBOF_MODE2
+        long_name: Coke + PCI + Scrap++
+        description: increased scrap injection in BF
+        input_activity_ratio:
+          COKE: 13.181 #GJ/t-steel
+          IRON_ORE: 1.292 #t/t-steel
+          SCRAP: 0.227 #t/t-steel
+          NAT_GAS: 0.0 #GJ/t-steel
+          ELEC: 0.204 #GJ/t-steel
+          LIME: 0.023 #t/t-steel
+          THERMALCOAL: 0.0 #GJ/t-steel
+          PCI: 4.383 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+
+      - id: BFBOF_MODE3
+        long_name: Coke + PCI + Green H2
+        description: Green H2 injection in BF leading to 10% emissions reduction
+        input_activity_ratio:
+          COKE: 11.307 #GJ/t-steel
+          IRON_ORE: 1.056 #t/t-steel
+          SCRAP: 0.305 #t/t-steel
+          NAT_GAS: 0.0 #GJ/t-steel
+          ELEC: 0.285  #MWh/t-steel
+          H2GREEN: 2.076 #GJ/t-steel
+          LIME: 0.023 #t/t-steel
+          THERMALCOAL: 0.0 #GJ/t-steel
+          PCI: 4.165 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: 
+          2022: 9999
+          2023: 9999
+          2024: 9999
+          2025: 9999
+          2026: 9999
+          2027: 9999
+          2028: 9999
+          2029: 9999
+          2030: 9999
+
+      - id: BFBOF_MODE4
+        long_name: Coke + PCI + Green H2++
+        description: Green H2 injection in BF leading to 20% emissions reduction
+        input_activity_ratio:
+          COKE: 8.331 #GJ/t-steel
+          IRON_ORE: 0.712 #t/t-steel
+          SCRAP: 0.473 #t/t-steel
+          NAT_GAS: 0.0 #GJ/t-steel
+          ELEC: 0.366  #GJ/t-steel
+          H2GREEN: 4.152 #GJ/t-steel
+          LIME: 0.023 #t/t-steel
+          THERMALCOAL: 0.0 #GJ/t-steel
+          PCI: 3.580 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: 
+          2022: 9999
+          2023: 9999
+          2024: 9999
+          2025: 9999
+          2026: 9999
+          2027: 9999
+          2028: 9999
+          2029: 9999
+          2030: 9999
+          2031: 9999
+          2032: 9999
+          2033: 9999
+          2034: 9999
+          2035: 9999
+          2036: 9999
+          2037: 9999
+          2038: 9999
+          2039: 9999
+          2040: 9999
+
+      - id: BFBOF_MODE5
+        long_name: Coke + PCI + HBI
+        description: HBI injection in BF
+        input_activity_ratio:
+          COKE: 9.285 #GJ/t-steel
+          IRON_ORE: 0.511 #t/t-steel
+          SCRAP: 0.137 #t/t-steel
+          NAT_GAS: 0.0 #GJ/t-steel
+          ELEC: 0.152 #MWh/t-steel
+          HBI: 0.622 #t/t-steel
+          LIME: 0.023 #t/t-steel
+          THERMALCOAL: 0.0 #GJ/t-steel
+          PCI: 3.219 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+
+  - id: DRI
+    long_name: DRI 
+    opex_fixed: 103 #$/t-steel #3% of capex
+    capex: 474 #$/t-steel 
+    availability_factor: 0.85
+    operating_life: 20 #yrs
+    capacity_additional_max_growth_rate: 0.2
+    capacity_additional_max_floor: 10000000
+    capacity_factor_annual_min: 0.85
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+
+    operating_modes:
+      - id: DRI_MODE1
+        long_name: Gas-based DRI
+        description: Only natural gas as a reducing agent
+        input_activity_ratio:
+          NAT_GAS: 10.669 #GJ/t-steel
+          65_IRON_ORE: 1.6 #t/t-steel
+          SCRAP: 0.056 #t/t-steel
+          ELEC: 1.366 #MWh/t-steel
+          LIME: 0.05 #t/t-steel
+        output_activity_ratio: 
+          PRIMARY_STEEL: 1.0 #t-steel
+
+      - id: DRI_MODE2
+        long_name: Gas + 50% Hydrogen
+        description: 50% Green H2 blending
+        input_activity_ratio:
+          NAT_GAS: 4.534 #GJ/t-steel
+          65_IRON_ORE: 1.6 #t/t-steel
+          SCRAP: 0.056 #t/t-steel
+          ELEC: 2.140 #MWh/t-steel
+          H2GREEN: 4.846 #GJ/t-steel
+          LIME: 0.05 #t/t-steel
+        #   CO2: 0.540 #tCO2/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: -112.3103359 #$/t-steel
+
+      - id: DRI_MODE3
+        long_name: 100% Green H2-based DRI
+        description: Only green H2-based as a reducing agent
+        input_activity_ratio:
+          65_IRON_ORE: 1.6 #t/t-steel
+          SCRAP: 0.056 #t/t-steel
+          ELEC: 2.443 #MWh/t-steel
+          H2GREEN: 8.535 #GJ/t-steel
+          LIME: 0.05 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: -112.3103359 #$/t-steel
+
+  - id: EAF_primary
+    long_name: EAF for primary steel
+    opex_fixed: 67 #$/t-steel 
+    capex: 289 #$/t-steel 
+    availability_factor: 0.85
+    operating_life: 20 #yrs 
+    capacity_additional_max_growth_rate: 0.2
+    capacity_additional_max_floor: 10000000
+    capacity_factor_annual_min: 0.85
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+
+    operating_modes:
+      - id: EAF_primary_MODE1
+        long_name: HBI-based EAF (Green)
+        description: Use HBI as a feedstock to make primary steel
+        input_activity_ratio:
+          HBI: 1.067 #t/t-steel
+          SCRAP: 0.056 #t/t-steel 
+          ELEC: 1.701 #MWh/t-steel
+          NAT_GAS: 0.422 #GJ/t-steel
+          LIME: 0.05 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: -112.3103359 #$/t-steel
+      - id: EAF_primary_MODE2
+        long_name: HBI-based EAF (Natural Gas)
+        description: Use HBI as a feedstock to make primary steel
+        input_activity_ratio:
+          HBI-NG: 1.067 #t/t-steel
+          SCRAP: 0.056 #t/t-steel 
+          ELEC: 1.701 #MWh/t-steel
+          NAT_GAS: 0.422 #GJ/t-steel
+          LIME: 0.05 #t/t-steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0 #t-steel
+        opex_variable: -112.3103359 #$/t-steel
+
+  - id: EAF_secondary
+    long_name: EAF for recycled steel
+    opex_fixed: 67 #$/t-steel 
+    capex: 289 #$/t-steel 
+    availability_factor: 0.85
+    operating_life: 20 #yrs
+    capacity_factor_annual_min: 0.85
+    # capacity_additional_max_growth_rate: 0.2
+    residual_capacity: # in tonnes
+      2022: 38009628
+      2023: 37713444
+      2024: 37669256
+      2025: 37669256
+      2026: 37669256
+      2027: 37669256
+      2028: 37669256
+      2029: 37669256
+      2030: 37669256
+      2031: 37669256
+      2032: 37669256
+      2033: 37669256
+      2034: 37669256
+      2035: 37669256
+      2036: 37669256
+      2037: 37669256
+      2038: 37669256
+      2039: 37669256
+      2040: 37669256
+      2041: 37669256
+      2042: 37669256
+      2043: 37669256
+      2044: 37669256
+      2045: 37669256
+      2046: 37669256
+      2047: 37669256
+      2048: 37669256
+      2049: 37669256
+      2050: 37669256
+      2051: 37669256
+      2052: 37669256
+      2053: 37669256
+      2054: 37669256
+      2055: 37669256
+      2056: 37669256
+      2057: 37669256
+      2058: 37669256
+      2059: 37669256
+      2060: 37669256
+
+    capacity_additional_min: #in tonnes
+      2022: 0.0
+      2023: 0.0
+      2024: 0.0
+      2025: 0.0
+      2026: 0.0
+      2027: 0.0
+      2028: 2000000
+      2029: 450000
+      2030: 0.0
+      2031: 4000000
+      2032: 0.0
+      2033: 0.0
+      2034: 0.0
+      2035: 0.0
+      2036: 0.0
+      2037: 3861000
+      2038: 0.0
+      2039: 0.0
+      2040: 0.0
+      2041: 0.0
+      2042: 0.0
+      2043: 0.0
+      2044: 0.0
+      2045: 0.0
+      2046: 0.0
+      2047: 0.0
+      2048: 0.0
+      2049: 0.0
+      2050: 0.0
+      2051: 0.0
+      2052: 0.0
+      2053: 0.0
+      2054: 0.0
+      2055: 0.0
+      2056: 0.0
+      2057: 0.0
+      2058: 0.0
+      2059: 0.0
+      2060: 0.0
+      
+    operating_modes:
+      - id: EAF_secondary_MODE1
+        long_name: Scrap-based EAF
+        description: Scrap as a feedstock to produce recycled steel
+        input_activity_ratio:
+          SCRAP: 1.123 #t/t-steel 
+          ELEC: 1.020 #MWh/t-steel
+          NAT_GAS: 0.422 #GJ/t-steel
+          LIME: 0.05 #t/t-steel
+        # emission_activity_ratio: 
+        #   CO2: 0.225 #tCO2/t-steel
+        output_activity_ratio:
+          SECONDARY_STEEL: 1.0 #t-steel
+        opex_variable: -112.3103359 #$/t-steel
+
+###############################UPSTREAM SUPPLY TECHNOLOGIES#######################################
+
+  #BFBOFMODE1 
+  - id: LIMESUPPLY
+    long_name: Limestone Supply  
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply limestone
+        # description: Supply limestone
+        output_activity_ratio:
+          LIME: 1.0
+        opex_variable: ${opex_variable.LIMESUPPLY} 
+        emission_activity_ratio:
+          CO2: 0.020 
+
+  - id: COKESUPPLY
+    long_name: Coking Coal Supply  
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply coking coal 
+        # description: Supply coking coal that can be used as coke (GJ)
+        output_activity_ratio:
+          COKE: 1.0
+        opex_variable: ${opex_variable.COKESUPPLY} #$/GJ assuming coking coal has 29 GJ/tonne
+        emission_activity_ratio:
+          CO2: 0.105 
+
+  - id: IRONORESUPPLY
+    long_name: Iron Ore Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply iron ore
+        # description: Supply iron ore to make primary steel  
+        output_activity_ratio:
+          IRON_ORE: 1.0
+        opex_variable: ${opex_variable.IRONORESUPPLY} #$/t
+        emission_activity_ratio:
+          CO2: 0
+
+  - id: SCRAPSUPPLY
+    long_name: Scrap Supply
+    capex: 0.001
+    operating_life: 99
+    # capacity_gross_max: 
+    #   2022: 40000000
+    #   2023: 40000000
+    #   2024: 40000000
+    #   2025: 40000000
+    #   2026: 40000000
+    #   2027: 40000000
+    #   2028: 40000000
+    #   2029: 40000000
+    #   2030: 40000000
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply scrap
+        description: Supply scrap to make primary steel
+        output_activity_ratio:
+          SCRAP: 1.0
+        opex_variable: ${opex_variable.SCRAPSUPPLY} #$/t
+        emission_activity_ratio:
+          CO2: 0 
+
+  - id: NATGASSUPPLY
+    long_name: Natural Gas Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply natural gas
+        # description: Supply natural gas to fuel the furnace to make steel 
+        output_activity_ratio:
+          NAT_GAS: 1.0
+        opex_variable: ${opex_variable.NATGASSUPPLY} #$/GJ
+        emission_activity_ratio:
+          CO2: 0.077 # Example value, should be based on real data
+
+  - id: ELECSUPPLY
+    long_name: Electricity Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply electricity
+        # description: Supply electricity to fuel the furnace to make steel 
+        output_activity_ratio:
+          ELEC: 1.0
+        opex_variable: ${opex_variable.ELECSUPPLY} #$/GJ 
+        emission_activity_ratio:
+          CO2: 0 #${emission_activity_ratio.CO2.NETZERO} #set to 0.1211 for a constant emission factor
+
+  - id: PCISUPPLY
+    long_name: PCI from Met Coal Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply Met Coal  as PCI
+        description: Supply met coal as PCI into BF/BOF
+        output_activity_ratio:
+          PCI: 1.0 #t
+        opex_variable: ${opex_variable.PCISUPPLY} #$/t
+        emission_activity_ratio:
+          CO2: 0.093
+
+  - id: H2GREENIMPORTSUPPLY
+    long_name: Green H2 Import Supply #constraint the import to at least lets say 60% of H2GREEN supply
+    capex: 0.001
+    operating_life: 99
+    # capacity_additional_max_growth_rate: 0.2
+    # capacity_additional_max_floor: 10000000
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+      2029: 0
+      2030: 0
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply green H2 from import
+        description: Supply green H2 from import
+        output_activity_ratio:
+          H2GREEN: 1.0
+        opex_variable: ${opex_variable.H2GREENIMPORTSUPPLY} #$/GJ 45.254
+        emission_activity_ratio:
+          CO2: 0 
+
+  - id: ELECTROLYSER
+    long_name: Electrolyser for Green Hydrogen Production
+    capex: "{y: 1400000 * (0.94 ** (y - min(${time_definition.years}))) for y in ${time_definition.years}}" #$/MW #https://www.pv-magazine.com/2024/03/21/electrolyzer-prices-what-to-expect/
+    opex_fixed: "{y: 5600 * (0.94 ** (y - min(${time_definition.years}))) for y in ${time_definition.years}}" #$/MW
+    operating_life: 50 # years
+    availability_factor: 0.6 # 40% downtime
+    # capacity_additional_max_growth_rate: 0.2
+    # capacity_additional_max_floor: 1
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+      2029: 0
+      2030: 0
+    capacity_activity_unit_ratio: 31536 #GJ-H2/MW # 365days/year×24hours/day×3600seconds/hour=31,536,000MJ/year. 
+    operating_modes:
+      - id: GENERATION
+        long_name: Green Hydrogen Production Mode
+        description: Produces green hydrogen from electricity
+        input_activity_ratio:
+          ELEC: 1.49253731 # GJ of electricity per GJ of hydrogen, 67% efficiency
+        output_activity_ratio:
+          H2GREEN: 1.0 # GJ of hydrogen per GJ of electricity
+        opex_variable: ${opex_variable.ELECSUPPLY} # $/GJ
+        emission_activity_ratio:
+          CO2: 0 
+  
+  - id: THERMALCOALSUPPLY
+    long_name: Thermal Coal Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply thermal coal
+        description: Supply thermal coal
+        output_activity_ratio:
+          THERMALCOAL: 1.0
+        opex_variable: ${opex_variable.THERMALCOALSUPPLY} #$/GJ
+        emission_activity_ratio:
+          CO2: 0.093
+
+  - id: 65IRONORESUPPLY
+    long_name: Pure Iron Ore (>=65%) Supply
+    capex: 0.001
+    operating_life: 99
+    operating_modes:
+      - id: SUPPLY
+        long_name: Supply pure iron ore (>=65%)
+        description: Supply iron ore with 65%+ pure iron
+        output_activity_ratio:
+          65_IRON_ORE: 1.0
+        opex_variable: ${opex_variable.65IRONORESUPPLY} #$/GJ
+        emission_activity_ratio:
+          CO2: 0
+
+  - id: HBISUPPLY
+    long_name: Imported Supply of HBI
+    capex: 0.001
+    operating_life: 99
+    # capacity_additional_max_growth_rate: 0.2
+    # capacity_additional_max_floor: 2000000
+    capacity_additional_max: 
+      2022: 0
+      2023: 0
+      2024: 0
+      2025: 0
+      2026: 0
+      2027: 0
+      2028: 0
+      2029: 0
+      2030: 0
+    operating_modes:
+      - id: HBI-SUPPLY
+        long_name: Supply HBI
+        description: Supply HBI
+        output_activity_ratio:
+          HBI: 1.0
+        opex_variable: ${opex_variable.HBISUPPLY} #$/t
+        emission_activity_ratio:
+          CO2: 0.047
+      - id: HBI-NG-SUPPLY
+        long_name: Supply HBI-NG
+        description: Supply HBI-NG
+        output_activity_ratio:
+          HBI-NG: 1.0
+        opex_variable: ${opex_variable.HBINGSUPPLY} #$/t
+        emission_activity_ratio:
+          CO2: 0.781
+
+  - id: BACKSTOP_PRIMARY
+    long_name: Backstop technology for primary steel
+    capex: 9999999
+    operating_life: 1
+    operating_modes:
+      - id: BACKSTOP_PRIMARY_MODE1
+        long_name: Supply primary steel
+        description: Supply primary steel
+        output_activity_ratio:
+          PRIMARY_STEEL: 1.0
+        opex_variable: 9999999
+
+  - id: BACKSTOP_SECONDARY
+    long_name: Backstop technology for secondary steel
+    capex: 9999999
+    operating_life: 1
+    operating_modes:
+      - id: BACKSTOP_SECONDARY_MODE1
+        long_name: Supply secondary steel
+        description: Supply secondary steel
+        output_activity_ratio:
+          SECONDARY_STEEL: 1.0
+        opex_variable: 9999999

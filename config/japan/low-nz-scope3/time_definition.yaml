@@ -1,0 +1,6 @@
+time_definition:
+  id: JapanSingleTimeSlice
+  years: "range(2022,2061)" #left is inclusive, right is exclusive
+  seasons: [1]
+  day_types: [1]
+  daily_time_brackets: [1]
