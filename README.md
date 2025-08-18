@@ -6,7 +6,7 @@ TZ-OSeMOSYS-STEEL is designed to be replicable in other countries and regions; s
 
 The model framework underpinning TZ-OSeMOSYS-STEEL is [TZ-OSeMOSYS](https://github.com/transition-zero/tz-osemosys). It is a modern, open-source energy systems modelling framework designed for long-run analysis and planning. Developed by TransitionZero as a pip-installable Python package, it is a re-built version of the [original OSeMOSYS (Open Source Energy Modelling System)](https://github.com/OSeMOSYS/OSeMOSYS).
 
-TZ-OSeMOSYS-STEEL is available under an AGPL open-source license. It was developed based on work done by [Anthea Lam](https://www.linkedin.com/in/anthealamiweng/) during her [MSc thesis at TransitionZero for Imperial College London during the summer of 2024](https://www.imperial.ac.uk/energy-futures-lab/study/annual-conference/sustainable-energy-futures-annual-conference-2024/research-themes/decarbonising-industry/). We are grateful for her work and will continue to build on it.
+TZ-OSeMOSYS-STEEL is available under an AGPL open-source license. It was developed based on work done by [Anthea Lam](https://www.linkedin.com/in/anthealamiweng/) during her [MSc thesis at TransitionZero for Imperial College London during the summer of 2024](https://www.imperial.ac.uk/energy-futures-lab/study/annual-conference/sustainable-energy-futures-annual-conference-2024/research-themes/decarbonising-industry/). We are grateful for her work and will continue to build on it. Please note that this repository will not be continuously maintained until additional funding is secured to adequately resource it. 
 
 ## Overview
 
