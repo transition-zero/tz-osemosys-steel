@@ -42,7 +42,7 @@ TZ-OSeMOSYS-STEEL is a modeling framework for optimizing steelmaking pathways in
 
 3. **Install dependencies:**
    ```sh
-   pip install tz-osemosys pandas numpy jupyter matplotlib pyyaml
+   pip install tz-osemosys pandas numpy jupyter matplotlib pyyaml highspy
    ```
 
 ## Usage
