@@ -30,7 +30,7 @@ TZ-OSeMOSYS-STEEL is a modeling framework for optimizing steelmaking pathways in
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/transitionzero/tz-osemosys-steel.git
+   git clone https://github.com/transition-zero/tz-osemosys-steel.git
    cd tz-osemosys-steel
    ```
 
