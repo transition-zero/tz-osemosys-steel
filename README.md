@@ -37,7 +37,7 @@ TZ-OSeMOSYS-STEEL is a modeling framework for optimizing steelmaking pathways in
 2. **(Optional) Create and activate a virtual environment:**
    ```sh
    python -m venv steel-demo
-   source steel-demo/bin/activate  # On Windows: venv\Scripts\activate
+   source steel-demo/bin/activate  # On Windows: steel-demo\Scripts\activate
    ```
 
 3. **Install dependencies:**
